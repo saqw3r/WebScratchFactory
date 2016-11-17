@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.IO;
 using Microsoft.AspNetCore.Hosting;
+using DownloadLib;
 
 namespace WebScratchFactory
 {
@@ -19,6 +16,13 @@ namespace WebScratchFactory
                 .Build();
 
             host.Run();
+
+
+            string[] uris = new[] {
+                "",
+                "" };
+            string destinationPath = "";
+            DownloadHelper dh = new DownloadHelper(uris, destinationPath);
         }
     }
 }
